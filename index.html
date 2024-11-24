@@ -21,25 +21,27 @@
 
         .container {
             background-color: #82abf5;
-            padding: 40px;
+            padding: 20px; /* Reduced padding for mobile */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 100%;
             display: flex;
-            flex-direction: column; /* Ensure elements within the container are stacked vertically */
+            flex-direction: column; /* Stack elements inside the container */
             align-items: center;
         }
 
         h1 {
             color: #5852a3;
-            font-size: 36px;
+            font-size: 28px; /* Slightly smaller font size */
+            margin-bottom: 20px;
         }
 
         .love-letter {
-            font-size: 18px;
+            font-size: 16px; /* Adjusted font size for mobile */
             color: #444;
             margin-bottom: 20px;
+            line-height: 1.5; /* Improve readability */
         }
 
         .iframe-container {
@@ -48,11 +50,11 @@
             padding: 10px;
             border-radius: 10px;
             background-color: #f9f9f9;
-            width: 100%; /* Make the iframe container fill the width */
+            width: 100%; /* Full width */
         }
 
         .iframe-container iframe {
-            width: 100%;
+            width: 100%; /* Make iframe responsive */
             height: 300px;
             border: none;
         }
@@ -72,6 +74,45 @@
         .credits a {
             color: #f2f0f5;
             text-decoration: none;
+        }
+
+        /* Media Query for smaller devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px; /* Smaller header on mobile */
+            }
+
+            .love-letter {
+                font-size: 14px; /* Smaller text for better readability on small screens */
+            }
+
+            .container {
+                padding: 15px; /* Reduced padding for mobile */
+            }
+
+            .iframe-container iframe {
+                height: 250px; /* Smaller iframe height for smaller screens */
+            }
+        }
+
+        /* Media Query for very small devices like phones in portrait mode */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px; /* Even smaller header for tiny screens */
+            }
+
+            .love-letter {
+                font-size: 12px; /* Further reduce text size for readability */
+                margin-bottom: 15px; /* More compact text blocks */
+            }
+
+            .iframe-container iframe {
+                height: 200px; /* Even smaller iframe for very small screens */
+            }
+
+            .credits {
+                font-size: 8px; /* Smaller credits font */
+            }
         }
     </style>
 </head>
